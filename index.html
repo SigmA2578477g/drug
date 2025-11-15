@@ -80,9 +80,12 @@
         <div class="error" id="errorMessage"></div>
     </div>
 
-    <script>
+    <script type="text/javascript">
         // Функция обработки авторизации через Telegram
         function onTelegramAuth(user) {
+            // Показываем информацию о пользователе
+            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+            
             // Скрываем секцию авторизации
             document.getElementById('loginSection').style.display = 'none';
             
